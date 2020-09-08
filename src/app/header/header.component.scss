@@ -1,0 +1,96 @@
+.toolbar{
+    background-color: #006655;
+    color: #ffffff;
+    font-size: xx-large;
+    height: 3cm;
+    font-family: Helvetica;
+}
+.logo{
+    position: relative;
+    left:-20px;
+    height:70%;
+    width:10%;
+    top:5px;
+}
+.titlee{
+    position: relative;
+    top:-20px;
+}
+.caption{
+    position: relative;
+    left: -150px;
+    top: 22px;
+}
+.signup{
+    flex: 1 1 auto;
+}
+.login{
+    background-color: #51cc48;
+    color:#ffffff;
+    font-size: x-large;
+    font-family: Helvetica;
+}
+input{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 80%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+    position: relative;
+    left:50px;
+    top:-50px;
+}
+img{
+    height:200px;
+    width:200px;
+    position: relative;
+    left:150px;
+    top:-50px;
+
+}
+.mat-raised-button{
+    background-color: #51cc48;
+    color:white;
+}
+
+.invalid-feedback{
+    color: red;
+    position: relative;
+    top:-50px;
+    left:50px;
+}
+.invalid-feedback1{
+    color: red;
+    position: relative;
+    top:-80px;
+    font-size:small;
+    left:50px;
+}
+::placeholder{
+    text-align: center;
+    color:#51cc48;
+}
+
+.signup{
+    background-color: white;
+    color: #51cc48;
+    position: relative;
+    left:190px;
+}
+.toggle{
+    position: relative;
+    top:-100px;
+    left:410px;
+}
+.btn{
+    position: relative;
+    top:-50px;
+}
