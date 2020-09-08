@@ -29,9 +29,10 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -129,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "Care2Cure"
+  "defaultProject": "Care2Cure",
+  "cli": {
+    "analytics": "b3fc757e-3d2b-47ee-bb9a-673099bf5090"
+  }
 }
