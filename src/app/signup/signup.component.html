@@ -41,7 +41,7 @@
             <div *ngIf="submitted && f.occupation.errors" class="errorsvalidation1">
               <div *ngIf="f.occupation.errors.required">*Occupation is required</div>
           </div>
-            <input type="text" formControlName="address1" id="defaultRegisterFormAddress"  placeholder="Address Line 1" class="userinput2">
+            <input type="text" formControlName="address1" id="defaultRegisterFormAddress1"  placeholder="Address Line 1" class="userinput2">
             <div *ngIf="submitted && f.address1.errors" class="errorsvalidation1">
               <div *ngIf="f.address1.errors.required">*Address is required</div>
           </div>
@@ -51,7 +51,7 @@
           </div>
     </div>
     <mat-dialog-actions>
-      <button class="btn" type="submit" (ngSubmit)="onSubmit()" mat-raised-button>SIGN UP</button>
+      <button class="btn" type="submit" (click)="onSubmit()" mat-raised-button>SIGN UP</button>
       <span class="or">or</span>
       <a mat-icon-button class="btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
       <a mat-icon-button class="btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>

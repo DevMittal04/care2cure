@@ -42,16 +42,24 @@ export class SignupComponent implements OnInit {
     return this.userForm.controls; 
    }
   onSubmit() {
+    alert("difjgj"+this.userForm.get('fullName').value);
     this.submitted = true;
     // stop here if form is invalid
     if (this.userForm.invalid) {
         return;
     }
+    if(this.submitted){
+      
+    }
+    
+    
+     
+    
     if(this.submitted)
     {
-      this.api.upload(this.f).subscribe(
+      this.api.upload(this.userForm).subscribe(
         response =>{
-          alert("Done"+this.f.fullName);
+          alert("Done"+this.userForm.get('fullName').value);
         }
       );
       this.dialog = false;
