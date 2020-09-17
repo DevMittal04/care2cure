@@ -4,7 +4,7 @@
   <button mat-icon-button mat-dialog-close class="closebutton"><mat-icon>clear</mat-icon></button>
     <div class="formelements">
       <input type="file" accept="image/*" #file>
-       <button mat-button (click)="file.click()"  class="upload"><img height="150px" width="150px" src="../assets/addimage.png" ></button>
+       <button mat-button (click)="file.click()"  class="upload"><img height="150px" width="150px" src="../assets/adduser.png" ></button>
             <input type="text" formControlName="fullName" id="defaultRegisterFormFirstName"  placeholder="Name" class="userinput">
             <div *ngIf="submitted && f.fullName.errors" class="errorsvalidation">
               <div *ngIf="f.fullName.errors.required">*Name is required</div>

@@ -1,0 +1,130 @@
+<mat-tab-group dynamicHeight>
+  <mat-tab fxLayout="row" fxLayoutAlign="space-between">
+    <div class="depr">
+    <ng-template mat-tab-label>
+      <mat-icon><img height=30px src="../assets/depressionicon.png"></mat-icon> DEPRESSION
+    </ng-template>
+    <div class="example-small-box mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between">
+      <h1>DEPRESSION</h1>
+      <p class="p1">Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. You may have trouble doing normal day-to-day activities, and sometimes you may feel as if life isn't worth living.</p>
+      <p class="p2"> More than just a bout of the blues, depression isn't a weakness and you can't simply "snap out" of it. Depression may require long-term treatment. But don't get discouraged. Most people with depression feel better with medication, psychotherapy or both.</p>
+  </div>
+   
+  <mat-card class = "tp-card">
+    <img mat-card-image src = "../assets/depression.png">
+ </mat-card>
+ <mat-card class = "tp-card1">
+  <img mat-card-image src = "../assets/dep.jpg">
+  <mat-card-content>
+    <h3>Sadness is just a part of it.</h3>
+  </mat-card-content>
+</mat-card>
+<div class="symptoms mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between">
+  <h2 class="symm">SYMPTOMS</h2>
+  <mat-grid-list cols="2" rowHeight="1:1" class="gridd">
+    <mat-grid-tile>
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+      <img src="../assets/sleep.png" class="photo">
+    </div>
+    <div class="flip-box-back">
+      <h2>SLEEPING</h2>
+      <p style="padding:10px;">You either Oversleep or feel Insomnia.</p>
+    </div>
+  </div>
+</div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+      <img src="../assets/overeating.png" class="photo">
+    </div>
+    <div class="flip-box-back">
+      <h2>EATING</h2>
+      <p style="padding:10px;">You either eat a lot or very less.</p>
+    </div>
+  </div>
+</div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+      <img src="../assets/weight.png" class="photo">
+    </div>
+    <div class="flip-box-back">
+      <h2>WEIGHT</h2>
+      <p style="padding:10px;">You either lose or gain weight.</p>
+    </div>
+  </div>
+</div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+      <img src="../assets/concentration.png" class="photo">
+    </div>
+    <div class="flip-box-back">
+      <h2>FEELINGS</h2>
+      <p style="padding:10px;">Lack of Concentration, feeling lost.</p>
+    </div>
+  </div>
+</div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+</div>
+<div class="types" fxLayout="column" fxLayoutAlign="space-between">
+   <h1>TYPES OF DEPRESSION</h1>
+   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h4>MAJOR DEPRESSION DISORDER</h4>
+        <img class="d-block" src="../assets/majordepressivedisorder.png" alt="First slide">
+        <p class="typesp">Unipolar or Major Depression sets in when you are diagnosed with five or more of the typical depression symptoms. The ability to work, sleep, study, eat and experience life in general is crippled in this case.</p>
+      </div>
+      <div class="carousel-item">
+        <h4>TREATMENT RESISTANT DEPRESSION</h4>
+        <img class="d-block" src="../assets/treatmentresistive.png" alt="Second slide">
+        <p class="typesp">This form might be chronic or longstanding and it does not respond to antidepressants. Often Electroconvulsive Therapy (ECT) is applied depending on the nature and severity of the condition.
+        </p>
+      </div>
+      <div class="carousel-item">
+        <h4>PERSISTANT/CHRONIC DEPRESSION DISORDER</h4>
+        <img class="d-block slider" src="../assets/persistantchronic.png" alt="Third slide">
+        <p class="typesp">This symptom persists for at least two years during which you will be affected by episodes of major depression accompanied by at least two other depressive symptoms. Also known as Dysthymia, this chronic form of depression interferes with your ability to function.</p>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <button mat-raised-button class="othertypes" (click)="openDialog()">OTHER TYPES</button>
+</div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon><img height=30px src="../assets/anxietyicon.png"></mat-icon> ANXIETY
+    </ng-template>
+    <div class="example-large-box mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between">
+      <h1>ANXIETY</h1>
+      <p>Anxiety is your body’s natural response to stress. It’s a feeling of fear or apprehension about what’s to come. The first day of school, going to a job interview, or giving a speech may cause most people to feel fearful and nervous.
+
+        But if your feelings of anxiety are extreme, last for longer than six months, and are interfering with your life, you may have an anxiety disorder</p>
+    </div>
+    <mat-card class = "tp-card">
+      <img mat-card-image src = "../assets/anxiety.jpg">
+   </mat-card>
+   <mat-card class = "tp-card1">
+    <img mat-card-image src = "../assets/anx.jpg ">
+  </mat-card>
+  </mat-tab>
+</mat-tab-group>

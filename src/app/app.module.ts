@@ -8,6 +8,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MaterialModule } from './material.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 
@@ -19,6 +21,10 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignupComponent } from './signup/signup.component';
 import { HeaderComponent } from './header/header.component';
+import { DisordersComponent } from './disorders/disorders.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { DepressiontypesComponent } from './depressiontypes/depressiontypes.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +32,9 @@ import { HeaderComponent } from './header/header.component';
     HomepageComponent,
     FooterComponent,
     SignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    DisordersComponent,
+    DepressiontypesComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,10 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule,
     AppRoutingModule,
     MatDatepickerModule,
-    MaterialModule
+    MaterialModule,
+    MatTabsModule,
+    MatGridListModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
