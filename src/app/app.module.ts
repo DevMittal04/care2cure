@@ -24,7 +24,7 @@ import { HeaderComponent } from './header/header.component';
 import { DisordersComponent } from './disorders/disorders.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { DepressiontypesComponent } from './depressiontypes/depressiontypes.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,6 +53,7 @@ import { DepressiontypesComponent } from './depressiontypes/depressiontypes.comp
     MaterialModule,
     MatTabsModule,
     MatGridListModule,
+    HttpClientModule
     
   ],
   providers: [],

@@ -1,12 +1,14 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { ApiService } from '../api.service';
 
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
+  providers:[ApiService],
   encapsulation: ViewEncapsulation.None
 
 })
@@ -15,9 +17,11 @@ export class SignupComponent implements OnInit {
   userForm: FormGroup;
   submitted = false;
   dialog : boolean;
+  baseurl = 'http://127.0.0.1:8000'
 
-  constructor(private formBuilder: FormBuilder) { }
 
+  constructor(private formBuilder: FormBuilder,private api:ApiService) { }
+    
   ngOnInit() {
     this.userForm = this.formBuilder.group({
       fullName: ['',[Validators.required]],
@@ -29,7 +33,9 @@ export class SignupComponent implements OnInit {
       occupation:['',[Validators.required]],
       address1:['',[Validators.required]],
       address2:['',[Validators.required]],
-      acknowledgement:['',[Validators.required]]
+      acknowledgement:['',[Validators.required]],
+      marital_status:['',[Validators.required]],
+      profilepic:['']
     });
   }
   get f() {
@@ -43,10 +49,16 @@ export class SignupComponent implements OnInit {
     }
     if(this.submitted)
     {
+      this.api.upload(this.f).subscribe(
+        response =>{
+          alert("Done"+this.f.fullName);
+        }
+      );
       this.dialog = false;
     }
    
 }
+   
 
 
 }
