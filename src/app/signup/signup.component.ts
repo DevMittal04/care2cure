@@ -50,7 +50,7 @@ export class SignupComponent implements OnInit {
         return;
     }*/
   
-    
+  alert(this.userForm.value);
     this.api.upload(this.userForm.value).subscribe(
       data => {
          alert(this.userForm.value);
