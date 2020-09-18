@@ -18,10 +18,13 @@ export class SignupComponent implements OnInit {
   submitted = false;
   dialog : boolean;
   baseurl = 'http://127.0.0.1:8000';
+  formdata;
 
 
 
-  constructor(private formBuilder: FormBuilder,private api:ApiService,public dialogRef:MatDialogRef<SignupComponent>) { }
+  constructor(private formBuilder: FormBuilder,private api:ApiService,public dialogRef:MatDialogRef<SignupComponent>) {
+    this.formdata = {fullName:'', email: '' , password: '', confirmpassword: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:[''] };
+   }
     
   ngOnInit() {
     this.userForm = this.formBuilder.group({

@@ -16,7 +16,7 @@ export class ApiService {
   
   upload(formdata): Observable<any> {
     const body = {name: formdata.fullName , email: formdata.email, password:formdata.password , contact:formdata.contact , address:formdata.address1,dob:formdata.dob,profile_pic:formdata.profilepic,acknowledgement:formdata.acknowledgement};
-    return this.http.post(this.baseurl + '/signup/', body,
+    return this.http.post(this.baseurl + '/signup', JSON.stringify(body),
     {headers: this.httpHeaders});
   }
 }
