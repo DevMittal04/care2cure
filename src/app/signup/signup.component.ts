@@ -46,15 +46,14 @@ export class SignupComponent implements OnInit {
   get f() {
     return this.userForm.controls; 
    }
-  onSubmit() {
+  onSubmit = () =>{
     
     // stop here if form is invalid
     /*if (this.userForm.invalid) {
         return;
     }*/
   
-  alert(this.userForm.value);
-    this.api.upload(this.userForm.value).subscribe(
+    this.api.upload(this.formdata).subscribe(
       data => {
          alert(this.userForm.value);
       },
