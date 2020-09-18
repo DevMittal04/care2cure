@@ -14,7 +14,7 @@ import { ApiService } from '../api.service';
 })
 export class SignupComponent implements OnInit {
 
-  userForm: FormGroup;
+//  userForm: FormGroup;
   submitted = false;
   dialog : boolean;
   baseurl = 'http://127.0.0.1:8000';
@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
    }
     
   ngOnInit() {
-    this.userForm = this.formBuilder.group({
+  /*  this.userForm = this.formBuilder.group({
       fullName: ['',[Validators.required]],
       email: ['',[Validators.required,Validators.email]],
       password: ['',[Validators.required,Validators.minLength(6)]],
@@ -41,11 +41,11 @@ export class SignupComponent implements OnInit {
       marital_status:['',[Validators.required]],
       profilepic:['']
     });
-
+*/
   }
-  get f() {
+  /*get f() {
     return this.userForm.controls; 
-   }
+   }*/
   onSubmit = () =>{
     
     // stop here if form is invalid
@@ -55,9 +55,10 @@ export class SignupComponent implements OnInit {
   
     this.api.upload(this.formdata).subscribe(
       data => {
-         alert(this.userForm.value);
+         alert("this.userForm.value");
       },
       error => {
+        alert(this.formdata);
         console.log(error);
       }
     );

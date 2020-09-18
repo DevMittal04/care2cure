@@ -14,8 +14,8 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   
-  upload(formdata): Observable<any> {
-    const body = {name: formdata.fullName , email: formdata.email, password:formdata.password , contact:formdata.contact , address:formdata.address1,dob:formdata.dob,profile_pic:formdata.profilepic,acknowledgement:formdata.acknowledgement};
+  upload(form): Observable<any> {
+    const body = {name: form.fullName , email: form.email, password:form.password , contact:form.contact , address:form.address1,dob:form.dob, occupation:form.occupation}; // ,profile_pic:form.profilepic,acknowledgement:form.acknowledgement
     return this.http.post(this.baseurl + '/signup', JSON.stringify(body),
     {headers: this.httpHeaders});
   }
