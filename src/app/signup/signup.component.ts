@@ -17,10 +17,11 @@ export class SignupComponent implements OnInit {
   userForm: FormGroup;
   submitted = false;
   dialog : boolean;
-  baseurl = 'http://127.0.0.1:8000'
+  baseurl = 'http://127.0.0.1:8000';
 
 
-  constructor(private formBuilder: FormBuilder,private api:ApiService) { }
+
+  constructor(private formBuilder: FormBuilder,private api:ApiService,public dialogRef:MatDialogRef<SignupComponent>) { }
     
   ngOnInit() {
     this.userForm = this.formBuilder.group({
@@ -37,33 +38,29 @@ export class SignupComponent implements OnInit {
       marital_status:['',[Validators.required]],
       profilepic:['']
     });
+
   }
   get f() {
     return this.userForm.controls; 
    }
   onSubmit() {
-    alert("difjgj"+this.userForm.get('fullName').value);
-    this.submitted = true;
+    
     // stop here if form is invalid
-    if (this.userForm.invalid) {
+    /*if (this.userForm.invalid) {
         return;
-    }
-    if(this.submitted){
-      
-    }
+    }*/
+  
     
-    
-     
-    
-    if(this.submitted)
-    {
-      this.api.upload(this.userForm).subscribe(
-        response =>{
-          alert("Done"+this.userForm.get('fullName').value);
-        }
-      );
+    this.api.upload(this.userForm.value).subscribe(
+      data => {
+         alert(this.userForm.value);
+      },
+      error => {
+        console.log(error);
+      }
+    );
       this.dialog = false;
-    }
+    
    
 }
    

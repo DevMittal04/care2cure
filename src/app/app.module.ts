@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MaterialModule } from './material.module';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -22,9 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SignupComponent } from './signup/signup.component';
 import { HeaderComponent } from './header/header.component';
 import { DisordersComponent } from './disorders/disorders.component';
-import {MatTabsModule} from '@angular/material/tabs';
 import { DepressiontypesComponent } from './depressiontypes/depressiontypes.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

@@ -53,9 +53,13 @@ openSignup() {
 
   dialogConfig.disableClose = true;
   dialogConfig.autoFocus = true;
-  dialogConfig.height = '700px';
-  dialogConfig.width = '600px';
+
   dialogConfig.panelClass = 'custom-content';
+  dialogConfig.maxWidth = '100%';
+  dialogConfig.minWidth = '40%';
+  dialogConfig.maxHeight = '100%';
+  dialogConfig.minHeight = '40%';
+
  
   
   this.dialog.open(SignupComponent, dialogConfig);

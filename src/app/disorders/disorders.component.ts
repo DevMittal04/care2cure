@@ -16,7 +16,13 @@ export class DisordersComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
   
   openDialog() {
-    const dialogRef = this.dialog.open(DepressiontypesComponent);
+    const dialogRef = this.dialog.open(DepressiontypesComponent,
+      {
+        maxHeight:'100%',
+        minHeight:'40%',
+        maxWidth:'100%',
+        minWidth:'40%',
+      });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);

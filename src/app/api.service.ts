@@ -13,7 +13,10 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
 
-  public upload(formData):Observable<any> {
-    return this.http.post(`${this.baseurl}/signup/`, formData);
+  
+  upload(formdata): Observable<any> {
+    const body = {name: formdata.fullName , email: formdata.email, password:formdata.password , contact:formdata.contact , address:formdata.address1,dob:formdata.dob,profile_pic:formdata.profilepic,marital_status:formdata.marital_status,acknowledgement:formdata.acknowledgement};
+    return this.http.post(this.baseurl + '/signup/', body,
+    {headers: this.httpHeaders});
   }
 }

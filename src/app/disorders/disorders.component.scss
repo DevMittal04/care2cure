@@ -1,16 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 .example-small-box, .example-large-box {
     display: flex;
     margin: 16px;
     padding: 16px;
     border-radius: 8px;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    left:400px;
     height: 450px;
     width: 450px;
     background-color: #006655;
     color:white;
     box-shadow: 5px 7px 13px #006655;
+    width: 30%;
+    float: left;
   }
   
   h1{
@@ -22,20 +26,22 @@
     text-align: center;
   }
   .tp-card {
+    margin: 16px;
     max-width: 360px;
     background-color: #ffffff;
     color:#006655;
-    position: relative;
-    top:-460px;
-    left:20px;
+    width: 30%;
+    float: left;
+ 
  }
  .tp-card1{
+  margin: 16px;
   max-width: 600px;
   background-color: #ffffff;
   color:#006655;
-  position: relative;
-  top:-900px;
-  left:900px;
+  width: 40%;
+  float: left;
+
 }
 
 .symptoms{
@@ -43,15 +49,14 @@
   color:#006655;
   width: 600px;
   height:600px;
-  position: relative;
-  top:-800px;
-  left:40px;
   border-radius:8px;
   display: flex;
   margin: 16px;
   padding: 16px;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 5px 10px 18px #C0C0C0;
+  width: 40%;
+  float: left;
 }
 
 .symm{
@@ -59,15 +64,14 @@
   font-family: Arial, Helvetica, sans-serif;
   font-style: bold;
 }
-.depr{
-  height:170vh;
-}
+
 .photo{
   width:200px;
   height:200px;
 }
 .gridd{
-  top:-30px;
+   position: relative;
+   top:-50px;
 }
 .flip-box {
   background-color: transparent;
@@ -117,10 +121,6 @@
 .types{
   background-color: #006655;
   color:white;
-  position: relative;
-  top:-680px;
-  left:700px;
-  width:700px;
   height:600px;
   border-radius:8px;
   display: flex;
@@ -128,12 +128,14 @@
   padding: 16px;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 5px 10px 18px #006655;
+  width: 50%;
+  float: left;
 }
 .d-block{
    height:300px;
    width:300px;
    position: relative;
-   left:180px;
+   left:200px;
 }
 h4{
   text-align:center;
@@ -147,3 +149,41 @@ h4{
   background-color: white;
   color:#006655;
 }
+
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+.tp-card {width: 30%;}
+.example-small-box{width: 30%;}
+.tp-card1{width: 40%;}
+.symptoms{width: 40%;}
+.types{width: 50%;}
+}
+
+@media only screen and (max-width: 600px) {
+  /*For phones*/
+  .tp-card {width: 100%;}
+.example-small-box{width: 100%;}
+.tp-card1{width: 100%;}
+.symptoms{width: 100%;}
+.types{width: 100%;}
+}
+
+@media only screen and (max-width: 768){
+   /*For phones*/
+   .tp-card {width: 100%;}
+.example-small-box{width: 100%;}
+.tp-card1{width: 100%;}
+.symptoms{width: 100%;}
+.types{width: 100%;}
+
+}
+
+@media only screen and (max-width: 992px) {
+  .tp-card {width: 50%;}
+  .example-small-box{width: 50%;}
+  .tp-card1{width: 50%;}
+  .symptoms{width: 50%;}
+  .types{width: 50%;}
+}
+
