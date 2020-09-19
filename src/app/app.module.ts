@@ -11,12 +11,8 @@ import { MaterialModule } from './material.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
-
-
-
-
+import { MatMenuModule } from '@angular/material/menu';
 import 'hammerjs';
-
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
@@ -26,6 +22,9 @@ import { HeaderComponent } from './header/header.component';
 import { DisordersComponent } from './disorders/disorders.component';
 import { DepressiontypesComponent } from './depressiontypes/depressiontypes.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import { Top10psychiatristComponent } from './top10psychiatrist/top10psychiatrist.component';
+import { SelfcareComponent } from './selfcare/selfcare.component';
 
 
 @NgModule({
@@ -36,7 +35,10 @@ import { FormsModule } from '@angular/forms';
     SignupComponent,
     HeaderComponent,
     DisordersComponent,
-    DepressiontypesComponent
+    DepressiontypesComponent,
+    ProfileComponent,
+    Top10psychiatristComponent,
+    SelfcareComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,7 @@ import { FormsModule } from '@angular/forms';
     MatTabsModule,
     MatGridListModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
     
   ],
   providers: [],

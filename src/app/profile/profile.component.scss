@@ -1,0 +1,168 @@
+.dashboardhead
+{
+    background-color: #006655;
+    height: 8vh;
+}
+.example-container {
+  width: 250px;
+  height: 100vh;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+.example-sidenav
+{    
+    background-color: #ffffff;
+    border-right: 3px solid #006655;
+}
+.menubutton
+{
+    background-color: #006655;
+}
+.closemenubutton
+{
+    background-color: #006655;
+    float: right;
+}
+.youractivities
+{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid #006655;
+    border-radius: 0;
+}
+.youractivities:hover
+{
+    background-color: #006655;
+    border-bottom: 2px solid black;
+    color: black;
+}
+.logout 
+{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid #006655;
+    border-radius: 0;
+}
+.logout:hover
+{
+    background-color: #006655;
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.editprofile
+{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid #006655;
+    border-radius: 0;
+}
+.editprofile:hover
+{
+    background-color:#006655;
+    border-bottom: 2px solid black;
+    color: black;
+}
+.profile_content_middle_headtag
+{
+    margin-top: 15px; 
+    
+}
+.activities
+{   
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.4% ;
+    grid-auto-rows: minmax(92vh,auto);
+}
+.chats
+{
+   border-right: 4px solid #006655;
+   overflow: auto;
+}
+.tips_received
+{
+    border-right: 4px solid #006655;
+     overflow: auto;
+   
+}
+.counsellor_consulted
+{
+     overflow: auto;
+}
+.activities_headtag
+{
+    background-color: #ffffff;
+    color: #006655;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 2px 1px 5px #006655;
+    height: 5vh;
+    
+}
+::-webkit-scrollbar 
+{
+  width: 10px;
+}
+::-webkit-scrollbar-track
+{
+  background: #006655;
+}
+::-webkit-scrollbar-thumb 
+{
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover
+ {
+  background: #555;
+}
+.profile_content
+{
+    display: grid;
+    grid-template-columns:40.0% 60.0%;
+    grid-auto-rows: minmax(92vh,auto);   
+}
+input[type="text"],input[type="tel"],input[type="textarea"],input[type=""]
+{
+    color: black !important;
+    width: 200px;
+}
+mat-label
+{
+    color: black !important;
+    font-size: 1rem;
+}
+
+.name,.email,.contact,.address,.occupation
+{
+    width: 450px;
+}
+.profile
+{
+    border: 4px solid black;
+    margin-top: 200px;
+    margin-left: 200px;
+    padding: 20px;
+}
+.content
+{
+    margin-top: 120px;
+    color: black !important;
+}
+mat-form-field
+{
+    padding: 20px;
+   
+}
+.save
+{
+    float: right;
+    right: 100px;
+}
