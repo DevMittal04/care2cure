@@ -1,0 +1,87 @@
+<router-outlet></router-outlet>
+<mat-toolbar class="dashboardhead">
+  <button mat-icon-button class="menubutton" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="profile_content_middle_headtag">
+    <p *ngIf="activitieshead">YOUR ACTIVITIES</p>
+    <p *ngIf="profilehead">EDIT PROFILE</p>
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="innercontainer">
+      <button mat-icon-button class="closemenubutton" (click)="drawer.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <button mat-raised-button (click)="showactivities()" class="youractivities">Your Activities</button>
+      <button mat-raised-button (click)="showaprofilecontent()" class="editprofile">Editprofile</button>
+      <button mat-raised-button class="logout">Logout</button>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>
+
+<div class="activities" *ngIf="isactivities">
+  <div class="chats">
+    <p class="activities_headtag">CHATS</p>
+  </div>
+  <div class="tips_received">
+    <p class="activities_headtag">TIPS RECEIVED</p>
+  </div>
+  <div class="counsellor_consulted">
+    <p class="activities_headtag">COUNSELLORS CONSULTED</p>
+  </div>
+</div>
+
+<div class="profile_content" *ngIf="isprofile">
+
+  <div class="profileimage">
+    <img src="../assets/adduser.png " class="profile" width="150px" height="150px">
+  </div>
+
+  <div class="profile_content_right_side ">
+    <form class="content" *ngIf="isprofile">
+      <mat-form-field class="name" floatLabel="always" color="primary" apperance="standard">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" [(ngModel)]="value" color="primary" value="gopal">
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="email" floatLabel="always" color="primary">
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="contact" floatLabel="always">
+        <mat-label>phone</mat-label>
+        <span matPrefix>+91 &nbsp;</span>
+        <input type="tel" matInput placeholder="555-555-1234">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="address" floatLabel="always">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="occupation" floatLabel="always">
+        <mat-label>Occupation</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </form>
+
+    <button mat-raised-button color="primary" class="save">Save</button>
+  </div>
+</div>
