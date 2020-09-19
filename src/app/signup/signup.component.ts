@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 
@@ -14,7 +14,7 @@ import { ApiService } from '../api.service';
 })
 export class SignupComponent implements OnInit {
 
-  userForm: FormGroup;
+ userForm: FormGroup;
   submitted = false;
   dialog : boolean;
   baseurl = 'http://127.0.0.1:8000';
@@ -27,19 +27,17 @@ export class SignupComponent implements OnInit {
    }
     
   ngOnInit() {
-    this.userForm = this.formBuilder.group({
-      fullName: ['',[Validators.required]],
-      email: ['',[Validators.required,Validators.email]],
-      password: ['',[Validators.required,Validators.minLength(6)]],
-      confirmpassword: ['',Validators.required],
-      contact:['',[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      dob:['',[Validators.required]],
-      occupation:['',[Validators.required]],
-      address1:['',[Validators.required]],
-      address2:['',[Validators.required]],
-      acknowledgement:['',[Validators.required]],
-      marital_status:['',[Validators.required]],
-      profilepic:['']
+      this.userForm = this.formBuilder.group({
+      fullName: new FormControl(this.formdata.fullName,[Validators.required]),
+      email: new FormControl(this.formdata.email,[Validators.required,Validators.email]),
+      password: new FormControl(this.formdata.password,[Validators.required,Validators.minLength(6)]),
+      confirmpassword: new FormControl(this.formdata.confirmpassword,[Validators.required]),
+      contact:new FormControl(this.formdata.contact,[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
+      dob:new FormControl(this.formdata.dob,[Validators.required]),
+      occupation:new FormControl(this.formdata.occupation,[Validators.required]),
+      address1:new FormControl(this.formdata.address1,[Validators.required]),
+      address2:new FormControl(this.formdata.address2,[Validators.required]),
+      profilepic:new FormControl(this.formdata.profilepic)
     });
 
   }
@@ -49,15 +47,16 @@ export class SignupComponent implements OnInit {
   onSubmit = () =>{
     
     // stop here if form is invalid
-    /*if (this.userForm.invalid) {
+    if (this.userForm.invalid) {
         return;
-    }*/
+    }
   
     this.api.upload(this.formdata).subscribe(
       data => {
-         alert(this.userForm.value);
+         alert("this.userForm.value");
       },
       error => {
+        alert(this.formdata);
         console.log(error);
       }
     );

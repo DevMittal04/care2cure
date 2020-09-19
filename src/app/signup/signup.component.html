@@ -1,53 +1,54 @@
 <mat-dialog-content class="modalsignup">
+  <!-- <form class="form"> -->
   <h1>CREATE NEW ACCOUNT</h1>
   <button mat-icon-button mat-dialog-close class="closebutton"><mat-icon>clear</mat-icon></button>
     <div class="formelements">
       <input type="file" [(ngModel)]="formdata.profilepic" accept="image/*" #file>
        <button mat-button (click)="file.click()"  class="upload"><img height="150px" width="150px" src="../assets/adduser.png" ></button>
-            <input type="text" [(ngModel)]="formdata.fullName" id="defaultRegisterFormFirstName"  placeholder="Name" class="userinput">
-            <div *ngIf="submitted && f.fullName.errors" class="errorsvalidation">
+            <input type="text" required  [(ngModel)]="formdata.fullName" id="defaultRegisterFormFirstName"  placeholder="Name" class="userinput">
+             <div *ngIf="submitted && f.fullName.errors" class="errorsvalidation">
               <div *ngIf="f.fullName.errors.required">*Name is required</div>
-          </div>
+          </div> 
         <input type="email" [(ngModel)]="formdata.email" id="defaultRegisterFormEmail"  placeholder="Email" class="userinput">
-        <div *ngIf="submitted && f.email.errors" class="errorsvalidation">
+         <div *ngIf="submitted && f.email.errors" class="errorsvalidation">
           <div *ngIf="f.email.errors.required">*Email is required</div>
           <div *ngIf="f.email.errors.email">*Email must be a valid email address</div>
-      </div>
+      </div> 
       <input type="password" [(ngModel)]="formdata.password"  placeholder="Password" class="userinput">
-      <div *ngIf="submitted && f.password.errors" class="errorsvalidation">
+       <div *ngIf="submitted && f.password.errors" class="errorsvalidation">
         <div *ngIf="f.password.errors.required">*Password is required</div>
         <div *ngIf="f.password.errors.minlength">*Mimimum Characters - 6</div>
-    </div>
+    </div> 
     <input type="password" [(ngModel)]="formdata.confirmpassword"  placeholder="Confirm Password" class="userinput">
       <div *ngIf="submitted && userForm.value.password != userForm.value.confirmpassword " class="errorsvalidation">
         <span>*Passwords do not match</span>
-      </div>
+      </div> 
 
           <input type="number" [(ngModel)]="formdata.contact" id="defaultRegisterFormContact"  placeholder="Contact" class="userinput">
-          <div *ngIf="submitted && f.contact.errors" class="errorsvalidation">
+         <div *ngIf="submitted && f.contact.errors" class="errorsvalidation">
             <div *ngIf="f.contact.errors.required">*Contact is required</div>
             <div *ngIf="f.contact.errors.pattern">*Invalid Phone Number</div>
-        </div>
-          <mat-form-field class="date" >
-            <input matInput [matDatepicker]="picker" placeholder="Date Of Birth" [(ngModel)]="formdata.dob" >
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        </div> 
+          <!--<mat-form-field class="date" > -->
+            <input type="date" placeholder="Date Of Birth" [(ngModel)]="formdata.dob" > <!--[matDatepicker]="picker"-->
+            <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          <div *ngIf="submitted && f.dob.errors" class="errorsvalidation1">
+          </mat-form-field> -->
+           <div *ngIf="submitted && f.dob.errors" class="errorsvalidation1">
             <div *ngIf="f.dob.errors.required">*DOB is required</div>
-        </div>
+        </div> 
             <input type="text" [(ngModel)]="formdata.occupation" id="defaultRegisterFormOccupation"  placeholder="Occupation" class="userinput1">
-            <div *ngIf="submitted && f.occupation.errors" class="errorsvalidation1">
+           <div *ngIf="submitted && f.occupation.errors" class="errorsvalidation1">
               <div *ngIf="f.occupation.errors.required">*Occupation is required</div>
-          </div>
+          </div> 
             <input type="text" [(ngModel)]="formdata.address1" id="defaultRegisterFormAddress1"  placeholder="Address Line 1" class="userinput2">
-            <div *ngIf="submitted && f.address1.errors" class="errorsvalidation1">
+           <div *ngIf="submitted && f.address1.errors" class="errorsvalidation1">
               <div *ngIf="f.address1.errors.required">*Address is required</div>
-          </div>
+          </div> 
             <input type="text" [(ngModel)]="formdata.address2" id="defaultRegisterFormAddress"  placeholder="Address Line 2" class="userinput3">
             <div *ngIf="submitted && f.address2.errors" class="errorsvalidation1">
               <div *ngIf="f.address2.errors.required">*Address is required</div>
-          </div>
+          </div> 
     </div>
     <mat-dialog-actions>
       <button class="btn" type="submit" (click)="onSubmit()" mat-raised-button>SIGN UP</button>
@@ -55,4 +56,5 @@
       <a mat-icon-button class="btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
       <a mat-icon-button class="btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
     </mat-dialog-actions>
+  <!-- </form> -->
 </mat-dialog-content>

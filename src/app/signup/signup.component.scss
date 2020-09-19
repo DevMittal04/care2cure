@@ -52,10 +52,23 @@ h1,::placeholder{
     top:-250px;
 }
 .date{
+
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 45%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid grey;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
     position: relative;
-    width: 270px;
-    top:-270px;
-    left:20px;
+    top:-280px;
+    left: 20px;
 }
 
  
