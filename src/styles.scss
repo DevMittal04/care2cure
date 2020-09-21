@@ -9,9 +9,16 @@
 
 .custom-content .mat-dialog-content{
     display:block;
-    overflow: auto;
+    overflow: hidden;
     max-height: 700px;
 }
 button:focus {
     outline: none !important;
 }
+
+
+
+.mat-step-label .mat-step-icon {
+    background-color: red !important;
+    color: red !important;
+    }

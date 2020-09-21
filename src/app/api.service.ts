@@ -19,4 +19,12 @@ export class ApiService {
     return this.http.post(this.baseurl + '/signup', JSON.stringify(body),
     {headers: this.httpHeaders});
   }
+
+  login(form): Observable<any> {
+    return this.http.get(this.baseurl + '/login/' + form ,
+    {headers: this.httpHeaders});
+  }
+  
+  
+  
 }

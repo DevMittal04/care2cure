@@ -2,13 +2,27 @@
   box-sizing: border-box;
 }
 
-.example-small-box, .example-large-box {
+.example-small-box {
     display: flex;
     margin: 16px;
     padding: 16px;
     border-radius: 8px;
     font-family: Arial, Helvetica, sans-serif;
     height: 450px;
+    width: 450px;
+    background-color: #006655;
+    color:white;
+    box-shadow: 5px 7px 13px #006655;
+    width: 30%;
+    float: left;
+  }
+
+  .example-large-box{
+    display: flex;
+    margin: 16px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 400px;
     width: 450px;
     background-color: #006655;
     color:white;
@@ -187,3 +201,13 @@ h4{
   .types{width: 50%;}
 }
 
+.tp-card2 {
+  margin: 16px;
+  max-width: 360px;
+  max-height: 450px;
+  background-color: #ffffff;
+  color:#006655;
+  width: 30%;
+  float: left;
+
+}

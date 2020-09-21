@@ -7,16 +7,17 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
 
-  value = ' ';
+
+  formdata;
   isprofile: boolean = false;
   isactivities: boolean = true;
   profilehead: boolean = false;
   activitieshead: boolean = true;
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
-  constructor() { }
+
+  
+  constructor() {
+    this.formdata = {fullName:'', email: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:[''] };
+   }
 
 
   showaprofilecontent() {
@@ -32,6 +33,10 @@ export class ProfileComponent implements OnInit {
     this.activitieshead = true;
   }
   ngOnInit(): void {
+  }
+
+  update(){
+
   }
 
 }

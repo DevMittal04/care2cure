@@ -1,64 +1,101 @@
   <app-header></app-header>
-  <div class="psychiatry">
-    <button mat-raised-button>
-      <img height="100px"  src="../assets/psychiatry.png">
-    </button>
+  <div class="components1">
+      <div class="person">
+       <img src="../assets/women.png">
+      </div>
+      <div class="person" >
+        <img src="../assets/both.png">
+      </div>
+      <div class="person">
+        <img src="../assets/man.png">
+      </div>
   </div>
-  <div class="statistics">
-    <button mat-raised-button>
-      <img  height="100px"  src="../assets/statistics.png">
-    </button>
+
+  <div class="card-group cards">
+    <div class="card mat-elevation-z4 tp-card">
+      <img src="../assets/selfcare.jpg" class="card-img-top" alt="">
+      <div class="card-body individual">
+        <h5 class="card-title">SELFCARE TIPS</h5>
+        <button mat-raised-button class="btnvisit" routerLink="/selfcare">GO</button>
+      </div>
+    </div>
+    <div class="card mat-elevation-z4 tp-card">
+      <img src="../assets/mindpalace.jpg" class="card-img-top" alt="...">
+      <div class="card-body individual">
+        <h5 class="card-title">MINDPALACE</h5>
+        <button mat-raised-button class="btnvisit">GO</button>
+      </div>
+    </div>
+    <div class="card mat-elevation-z4 tp-card">
+      <img src="../assets/disorderswall.jpg" class="card-img-top" alt="...">
+      <div class="card-body individual">
+        <h5 class="card-title">DISORDERS</h5>
+        <button mat-raised-button class="btnvisit" routerLink="/disorders">GO</button>
+      </div>
+    </div>
   </div>
-  <div class="chatbot">
-    <button mat-raised-button>
-      <img height="100px"  src="../assets/robot.png">
-    </button>
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade modules" data-ride="carousel">
+    <div class="carousel-inner" >
+      <div class="carousel-item active" fxLayout="row" fxLayoutAlign="space-between">
+        <img src="../assets/posterstatistics.jpg" class="d-block slideimage" alt="...">
+        <div fxLayout="column" class="info" fxLayoutAlign="space-between">
+          <h1>MENTAL HEALTH STATISTICS</h1>
+          <p>5 percent of adults (18 or older) experience a mental illness in any one year, equivalent to 43.8 million people. Of adults in the United States with any mental disorder in a one-year period, 14.4 percent have one disorder, 5.8 percent have two disorders and 6 percent have three or more.</p>
+          <p>Mental health and substance use challenges can take many forms. There’s depression, anxiety, schizophrenia, addiction and the list goes on. Some of these challenges are more visible and you might recognize them immediately. Others can be harder to see when you’re not looking for them. But, they are still there.</p>
+          <p>The Mental Health Atlas series is considered the most comprehensive resource on global information on mental health and an important tool for developing and planning mental health services within countries and regions. The Mental Health Atlas 2017 acquires new importance as it includes information and data on the progress towards the achievement of objectives and targets of the Comprehensive Mental Health Action Plan 2013–2020.</p>
+          <p>Learn about India's up and coming mental health status growing each day. Understand Mental Health. </p>
+
+          <button class="takemethere" mat-raised-button><img height="30px" width="30px" src="../assets/statistics.png">TAKE ME THERE</button>
+        </div>
+      </div>
+      <div class="carousel-item" fxLayout="row" fxLayoutAlign="space-between">
+        <img src="../assets/therapy.jpg" class="d-block slideimage" alt="...">
+        <div fxLayout="column" fxLayoutAlign="space-between" class="info">
+          <h1>TOP COUNSELLORS</h1>
+          <p>Talking about your problems and feelings sometimes heals everything.You feel as though everything will be fine and there are always people who care about you.</p>
+          <p>Whether you’ve been the victim of domestic violence or have been struggling with addiction, few tools are more important on your road to recovery than counseling. Counseling can play a crucial role in helping you overcome the mental and emotional challenges associated with your situation so you can make lasting, positive changes.
+
+            What is it that makes counseling so important during the recovery process? First, for many people, it simply helps to have a caring person who can listen to them and offer informed advice and support.
+            
+            For example, many addiction counselors focus on teaching skills that will allow individuals to reduce their cravings or eliminate triggers from their lives. They may help a recovering individual develop mental habits that allow them to resist temptation and replace destructive behaviors with positive habits.
+            
+            </p>
+          <p>Visit our page to know the top psychiatrists so that you can contact them and get the best help possible.</p>
+          <button class="takemethere" routerLink="/top10" mat-raised-button><img height="30px" width="30px" src="../assets/psychiatry.png">TAKE ME THERE</button>
+
+        </div>
+      </div>
+      <div class="carousel-item" fxLayout="row" fxLayoutAlign="space-between">
+        <img src="../assets/livess.jpg" class="d-block slideimage" alt="...">
+        <div fxLayout="column" fxLayoutAlign="space-between" class="info">
+          <h1>LIVE RSS AND ARTICLES</h1>
+          <p>Talking about your problems and feelings sometimes heals everything.You feel as though everything will be fine and there are always people who care about you.</p>
+          <p>Whether you’ve been the victim of domestic violence or have been struggling with addiction, few tools are more important on your road to recovery than counseling. Counseling can play a crucial role in helping you overcome the mental and emotional challenges associated with your situation so you can make lasting, positive changes.
+
+            What is it that makes counseling so important during the recovery process? First, for many people, it simply helps to have a caring person who can listen to them and offer informed advice and support.
+            
+            For example, many addiction counselors focus on teaching skills that will allow individuals to reduce their cravings or eliminate triggers from their lives. They may help a recovering individual develop mental habits that allow them to resist temptation and replace destructive behaviors with positive habits.
+            
+            </p>
+          <p>Visit our page to know the top psychiatrists so that you can contact them and get the best help possible.</p>
+          <button class="takemethere" mat-raised-button><img height="30px" width="30px" src="../assets/liverss.png">TAKE ME THERE</button>
+
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <div class="videoconference">
-    <button mat-raised-button>
-      <img height="100px"  src="../assets/videoconference.png">
-    </button>
+  
+  
+  <div class="footer">
+    <app-footer></app-footer>
   </div>
-  <div class="treebranch">
-    <img height="500px"  width="500px" src="../assets/treebranch.png">
-  </div>
-  <div class="aboutus">
-    <button mat-button><img height="100px" src="../assets/aboutus.jpg"></button>
- </div>
-  <div class="contactus">
-    <button mat-button><img height="100px" src="../assets/contactus.png"></button>
- </div>
- <div class="help">
-  <button mat-button><img height="100px" src="../assets/help.png"></button>
-</div>
-<div class="greenline">
-  <img height="500px" src="../assets/straightline.png">
-</div>
-<div class="disorders">
-  <button mat-raised-button routerLink="/disorders"> 
-     <img height="100px" src="../assets/disorders.png">
-  </button>
-</div>
-<div >
-  <mat-card class = "tp-card">
-    <img mat-card-image src = "../assets/selfcare.jpg">
-    <mat-card-content>
-       <h1>SELFCARE TIPS</h1>
-    </mat-card-content>
- </mat-card>
- <mat-card class = "tp-card1">
-  <img mat-card-image src = "../assets/anxietyreliefgames.jpg">
-  <mat-card-content>
-     <h1 >MIND PALACE</h1>
-  </mat-card-content>
-</mat-card>
-<mat-card class = "tp-card2">
-  <img mat-card-image src = "../assets/liverss.jpg">
-  <mat-card-content>
-     <h1>LIVE RSS - ARTICLES</h1>
-  </mat-card-content>
-</mat-card>
-</div>
-<div class="footer">
-  <app-footer></app-footer>
-</div>
+  

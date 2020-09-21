@@ -68,18 +68,18 @@
 {
     background-color:#006655;
     border-bottom: 2px solid black;
-    color: black;
+    color: white;
 }
 .profile_content_middle_headtag
 {
     margin-top: 15px; 
+    color:white;
     
 }
 .activities
 {   
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.4% ;
-    grid-auto-rows: minmax(92vh,auto);
 }
 .chats
 {
@@ -127,7 +127,6 @@
 {
     display: grid;
     grid-template-columns:40.0% 60.0%;
-    grid-auto-rows: minmax(92vh,auto);   
 }
 input[type="text"],input[type="tel"],input[type="textarea"],input[type=""]
 {
@@ -143,6 +142,17 @@ mat-label
 .name,.email,.contact,.address,.occupation
 {
     width: 450px;
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+    display: block;
+    border: none;
+	border-bottom: 1px solid grey;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
 }
 .profile
 {
@@ -156,13 +166,10 @@ mat-label
     margin-top: 120px;
     color: black !important;
 }
-mat-form-field
-{
-    padding: 20px;
-   
-}
 .save
 {
     float: right;
     right: 100px;
+    background-color: #006655;
+    color:white;
 }

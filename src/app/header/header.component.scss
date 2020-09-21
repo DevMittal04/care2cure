@@ -4,6 +4,10 @@
     font-size: xx-large;
     height: 3cm;
     font-family: Helvetica;
+    position:sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
 }
 .logo{
     position: relative;
@@ -15,20 +19,29 @@
 .titlee{
     position: relative;
     top:-20px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .caption{
     position: relative;
-    left: -150px;
+    left: -180px;
     top: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: italic;
+    
 }
 .signup{
     flex: 1 1 auto;
 }
 .login{
-    background-color: #006655;
-    color:#ffffff;
+    background-color: #ffffff;
+    color:#006655;
+    padding:15px;
     font-size: x-large;
-    font-family: Helvetica;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 input{
     box-sizing: border-box;
@@ -56,10 +69,7 @@ img{
     top:-50px;
 
 }
-.mat-raised-button{
-    background-color: #006655;
-    color:white;
-}
+
 
 .invalid-feedback{
     color: red;
@@ -92,4 +102,13 @@ img{
 .btn{
     position: relative;
     top:-50px;
+    background-color: #006655;
+    color: #ffffff;
+}
+
+.menubar{
+position: relative;
+left:-600px;
+top:30px;
+font-size: x-large;
 }

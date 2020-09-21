@@ -3,6 +3,7 @@ import { Component,ElementRef } from '@angular/core';
 import { MatDialog,MatDialogConfig } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SignupComponent } from '../signup/signup.component';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   showModal: boolean;
   registerForm: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private el: ElementRef,public dialog:MatDialog) { }
+  constructor(private formBuilder: FormBuilder,private el: ElementRef,public dialog:MatDialog,private api:ApiService) { }
   show()
   {
     this.showModal = true;
@@ -36,6 +37,20 @@ get f() {
   }
 onSubmit() {
     this.submitted = true;
+    this.api.login(this.registerForm.get('email').value).subscribe(
+        data => {
+          if(this.registerForm.get('password').value == data.password){
+              alert("Login Successful!");
+          }
+          else{
+            alert("Login Unsuccessful");
+          }
+        },
+        error => {
+          console.log(error);
+        }
+    );
+
     // stop here if form is invalid
     if (this.registerForm.invalid) {
         return;
@@ -64,6 +79,8 @@ openSignup() {
   
   this.dialog.open(SignupComponent, dialogConfig);
 }
+
+
  
 
 
