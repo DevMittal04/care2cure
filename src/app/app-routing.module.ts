@@ -8,6 +8,7 @@ import { DepressiontypesComponent } from './depressiontypes/depressiontypes.comp
 import { ProfileComponent } from './profile/profile.component';
 import { Top10psychiatristComponent } from './top10psychiatrist/top10psychiatrist.component';
 import { SelfcareComponent } from './selfcare/selfcare.component';
+import { LiverssComponent } from './liverss/liverss.component';
 
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'depressiontypes',component: DepressiontypesComponent},
   { path: 'profile',component:ProfileComponent},
   { path: 'top10',component:Top10psychiatristComponent},
-  { path:'selfcare',component:SelfcareComponent}
+  { path:'selfcare',component:SelfcareComponent},
+  { path: 'liverss',component:LiverssComponent}
 
 ];
 

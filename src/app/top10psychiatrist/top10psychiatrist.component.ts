@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Top10psychiatristComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    
+  ) { }
 
   ngOnInit() {
   }

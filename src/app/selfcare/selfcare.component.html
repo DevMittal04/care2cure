@@ -1,17 +1,6 @@
 <html>
 
-<head>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-
-<mat-toolbar class="dashboardhead">
+<mat-toolbar class="dashboardhead mat-elevation-z4">
 
   <div class="logocontent">
     <img src="../assets/carelogo.png">
@@ -21,7 +10,7 @@
     <p class="subcontent2">Your Health Is Out Priority</p>
   </div>
 </mat-toolbar>
-<mat-tab-group mat-align-tabs="end" [backgroundColor]="bgcolor" [color]="color" [disableRipple]=true>
+<mat-tab-group mat-align-tabs="end" >
   <mat-tab label="Self Care Tips">
     <div class="content">
       <mat-card class="carddata"> Start with yourself. Take better care of yourself.</mat-card>
@@ -55,104 +44,39 @@
       <mat-card class="carddata"> Get enough sleep, no less, no more. Perfect 7 hours of sleep.</mat-card>
     </div>
   </mat-tab>
-  <mat-tab label="Depression Treatment">
-    <div id="carousel-example" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example" data-slide-to="1" class="active"></li>
-        <li data-target="#carousel-example" data-slide-to="2"></li>
-        <li data-target="#carousel-example" data-slide-to="3"></li>
-        <li data-target="#carousel-example" data-slide-to="4"></li>
-        <li data-target="#carousel-example" data-slide-to="5"></li>
-        <li data-target="#carousel-example" data-slide-to="6"></li>
-        <li data-target="#carousel-example" data-slide-to="7"></li>
-      </ol>
-
+  <mat-tab label="Treatment ">
+    <div id="carouselExampleInterval" class="carousel slide types mat-elevation-z4" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="item active">
-          <mat-card class="treatementcontent">
-            <div class="imagecontent">
-              <img src="a.jpg" width="100%" height="100%" />
-            </div>
-          </mat-card>
-          <div class="carousel-caption">
-            <h3>Meow</h3>
-            <p>Just Kitten Around</p>
-          </div>
+        <div class="carousel-item active" data-interval="10000">
+          <h1>DEPRESSION TREATMENT</h1>
+          <p style="padding: 20px;">Diagnosis of depression is crucial in order to expedite the healing process. Often wrong medication and counselling leads a person experiencing depression to sink further into adverse conditions. Getting professional help from a doctor and a mental health expert is the right way to start. Treatments shall be initiated depending upon the type and condition of depression that you are being diagnosed with. It’s important to remember that involving yourself in ‘talk therapy‘ with your counsellor, letting him or her cross the threshold of your emotional resistance is crucial towards the healing process.</p>
+         <span>Individuals experiencing depressive disorders can be administered:</span>
+          <mat-list>
+            <mat-list-item> Medication </mat-list-item>
+            <mat-list-item> Tricyclics (older antidepressants) </mat-list-item>
+            <mat-list-item> Monoamine oxidase inhibitors (MAOIs) </mat-list-item>
+            <mat-list-item>Antidepressants</mat-list-item>
+            <mat-list-item>Psychotherapy</mat-list-item>
+            <mat-list-item>Interpersonal therapy</mat-list-item>
+            <mat-list-item>Psychodynamic therapy</mat-list-item>
+            <mat-list-item>Cognitive Behavioral therapy</mat-list-item>
+            <mat-list-item>Electroconvulsive therapy (ECT)</mat-list-item>
+            <mat-list-item>Vagus Nerve Stimulation (VNS)</mat-list-item>
+            <mat-list-item>Repetitive Transcranial Magnetic Stimulation (RTMS)</mat-list-item>
+           </mat-list>
         </div>
-        <div class="item">
-          <mat-card class="treatementcontent">
-            <div class="imagecontent">
-              <img src="../assets/b.jpg" width="100%" height="100%" />
-            </div>
-          </mat-card>
-          <div class="carousel-caption">
-            <h3>Meow</h3>
-            <p>Just Kitten Around</p>
-          </div>
+        <div class="carousel-item" data-interval="2000">
         </div>
-        <div class="item">
-          <mat-card class="treatementcontent">
-            <div class="imagecontent">
-              <img src="../assets/c.jpg" width="100%" height="100%" />
-            </div>
-          </mat-card>
-          <div class="carousel-caption">
-            <h3>Meow</h3>
-            <p>Just Kitten Around</p>
-          </div>
-        </div>
-        <div class="item">
-          <mat-card class="treatementcontent">
-            <div class="imagecontent">
-              <img src="../assets/d.jpg" width="100%" height="100%" />
-            </div>
-          </mat-card>
-          <div class="carousel-caption">
-            <h3>Meow</h3>
-            <p>Just Kitten Around</p>
-          </div>
-        </div>
-        <div class="item">
-          <mat-card class="treatementcontent">
-            <div class="imagecontent">
-              <img src="../assets/e.jpg" width="100%" height="100%" />
-            </div>
-          </mat-card>
-          <div class="carousel-caption">
-            <h3>Meow</h3>
-            <p>Just Kitten Around</p>
-          </div>
-        </div>
-        <div class="item">
-          <mat-card class="treatementcontent">
-            <div class="imagecontent">
-              <img src="../assets/f.jpg" width="100%" height="100%" />
-            </div>
-          </mat-card>
-          <div class="carousel-caption">
-            <h3>Meow</h3>
-            <p>Just Kitten Around</p>
-          </div>
-        </div>
-        <div class="item">
-          <mat-card class="treatementcontent">
-            <div class="imagecontent">
-              <img src="../assets/g.jpg" width="100%" height="100%" />
-            </div>
-          </mat-card>
-          <div class="carousel-caption">
-            <h3>Meow</h3>
-            <p>Just Kitten Around</p>
-          </div>
+        <div class="carousel-item">
         </div>
       </div>
-
-      <a class="left carousel-control" id=left href="#carousel-example" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+      <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
       </a>
-      <a class="right carousel-control" id=right style="background:none !important" href="#carousel-example"
-        data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+      <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
       </a>
     </div>
   </mat-tab>

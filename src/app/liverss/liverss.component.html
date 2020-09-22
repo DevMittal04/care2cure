@@ -1,0 +1,161 @@
+<html>
+<mat-toolbar class="dashboardhead">
+    <div class="tcontainer">
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <div class="ticker-item">Depression is a common mental disorder. Globally, more than 264 million people of all ages suffer from depression.
+                Depression is a leading cause of disability worldwide and is a major contributor to the overall global burden of
+                disease.
+                More women are affected by depression than men.
+                Depression can lead to suicide.
+                There are effective psychological and pharmacological treatments for moderate and severe depression.</div>
+
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
+<body>
+<mat-drawer-container class="example-container" autosize opened:true>
+    <mat-drawer #drawer class="example-sidenav" mode="side" opened >
+        <div class="innercontainer">
+            <button mat-raised-button (click)="newsfeed()" class="newsfeed">NEWS FEED</button>
+            <button mat-raised-button (click)="articles()" class="articles">ARTICLES</button>
+            <button mat-raised-button (click)="quotes()"  class="quotes">QUOTES</button>
+        </div>
+        <div class="text-right">
+            <button class="imagebutton" (click)="articlebutton()"><img src="../assets/article.png"></button>
+        </div>
+    </mat-drawer>
+</mat-drawer-container>
+<div class="articlewritting" *ngIf="isarticlewritting">
+    <mat-card>
+        <mat-form-field class="example-full-width" >
+            <mat-label >ARTICLE TITLE</mat-label>
+            <input matInput placeholder="Ex. CaretoCure" >
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <mat-form-field class="example-full-width">
+            <mat-label>YOURNAME/ANONYMOUS</mat-label>
+            <input matInput placeholder="Ex. CaretoCure/fhgkshd" >
+        </mat-form-field>
+        <mat-divider></mat-divider>
+            <mat-card class="articlecontentcard">
+                <textarea matInput #message maxlength="1000" placeholder="Ex. It makes me feel..."></textarea>
+                <mat-hint >{{message.value.length}} / 1000</mat-hint>
+            </mat-card>
+        <button class="articlebutton" mat-raised-button>SUBMIT</button>
+    </mat-card>
+</div>
+    <div class="newsfeedcontent" *ngIf="isnewsfeed">
+        <script language="JavaScript"
+            src="http://feedroll.com/rssviewer/feed2js.php?src=https%3A%2F%2Frss.app%2Ffeeds%2Fbw51cBoHy9IqcKIa.xml&au=y&date=y&targ=y&utf=y&pc=y&html=a"
+            charset="UTF-8" type="text/javascript"></script>
+    </div>
+    <div class="articlewritten" *ngIf="isarticlewritten">
+        <div class="articlewrittenmain">
+            <mat-card class="articlewrittencard">
+                <div class="articleheader" style="width: 15%; height: 20%;">
+                        <img src="../assets/treatmentresistive.png" style="width: 100%; height: 100%;">
+                </div>
+                <div class="articleheader" style="width: 85%; height: 10%;">
+                    <label> Depression Signs and Symptoms</label>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="articlebody">
+                    <label> 
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+                    <p>The most important difference compared to a psychologist is that a psychiatrist is allowed to prescribe medication, and
+                    has not had as much communication technique training as a psychologist. So a psychiatrist may prescribe medication and
+                    will more quickly use medication as treatment than a psychologist will.</p>
+
+                 </label>
+                </div>
+                <div class="articlewrittername">
+                    <label>-Dr. Ravi Prakash</label>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <div class="quotescontent" *ngIf="isquotes">
+        <div class="innerquotescontent">
+        <mat-card class="quotesstatic">
+            <div class="cardcontent" style="width: 800px;">
+                <p>“I didn't want to wake up. I was having a much better time asleep. And that's really sad. It was almost like a reverse nightmare, like when you wake up from a nightmare you're so relieved. I woke up into a nightmare.”</p>
+            </div>
+            <div class="cardcontent">
+                <img src="../assets/a1.png" width="120px" height="120px">
+            </div>
+        </mat-card>
+        <mat-card class="quotesstatic">
+            <div class="cardcontent" style="width: 800px;">
+                <p>“There are wounds that never show on the body that are deeper and more hurtful than anything that bleeds.”</p>
+            </div>
+            <div class="cardcontent">
+                <img src="../assets/a2.png" width="120px" height="120px">
+            </div>
+        </mat-card>
+        <mat-card class="quotesstatic">
+        <div class="cardcontent" style="width: 800px;">
+            <p>“Anxiety is love's greatest killer. It makes others feel as you might when a drowning man holds on to you. You want to
+            save him, but you know he will strangle you with his panic.”</p>
+        </div>
+        <div class="cardcontent">
+            <img src="../assets/a3.png" width="120px" height="120px">
+        </div>
+        </mat-card>
+        <mat-card class="quotesstatic">
+        <div class="cardcontent" style="width: 800px;">
+            <p>“Worrying is carrying tomorrow's load with today's strength- carrying two days at once. It is moving into tomorrow ahead
+            of time. Worrying doesn't empty tomorrow of its sorrow, it empties today of its strength.”</p>
+        </div>
+        <div class="cardcontent">
+            <img src="../assets/a4.png" width="120px" height="120px">
+        </div>
+        </mat-card>
+        <mat-card class="quotesstatic">
+            <div class="cardcontent" style="width: 800px;">
+                <p>“One of the things that baffles me … is how there can be so much lingering stigma with regards to mental illness,
+                specifically bipolar disorder. In my opinion, living with manic depression takes a tremendous amount of balls.”</p>
+            </div>
+            <div class="cardcontent">
+                <img src="../assets/a5.png" width="120px" height="120px">
+            </div>
+        </mat-card>
+        <mat-card class="quotesstatic">
+            <div class="cardcontent" style="width: 800px;">
+                <p>“I grew up in this kind of fishbowl existence and I figured, if people were going to say it about me, then I was going
+                to say it first and I was going to say it better. It’s my way of trying to own a situation.” </p>
+            </div>
+            <div class="cardcontent">
+                <img src="../assets/a6.png" width="120px" height="120px">
+            </div>
+        </mat-card>
+        </div>
+    </div>
+
+
+</body>
+</html>
