@@ -25,31 +25,65 @@
 }
 .profile_content_middle_headtag
 {
-    color: black;
+    color: white;
     font-size: larger;
     word-spacing: 5px;
 }
-.top10cards
-{
-    margin-top: 10vh;
-}
-.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9,.card10 {
-  max-width: 200px;
-  padding: 40px;
-  border: 4px solid #006655;
+
+
+.headerimage {
+  width:200px;
+  height:200px;
 }
 
 
-.header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+.card-flip > div {
+  backface-visibility: hidden;
+  transition: transform 300ms;
+  transition-timing-function: linear;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
 }
 
-mat-grid-list{
- 
-    height: 90px;
+.card-front {
+  transform: rotateY(0deg);
 }
-mat-grid-tile{
- 
-    height: 90px;
+
+.card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+}
+
+.card-flip:hover .card-front {
+  transform: rotateY(-180deg);
+}
+  
+.card-flip:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.counsellor{
+   max-width: 600px;
+  
+}
+
+.counsellor1{
+  max-width: 600px;
+   background-color: #006655;
+   color:#ffffff;
+}
+.cardlay{
+  max-width: 600px;
+  float:left;
+  margin-left:20px;
+  margin-top:20px;
+
+}
+
+.btnn{
+  background-color: #ffffff;
+  color:#006655;
 }

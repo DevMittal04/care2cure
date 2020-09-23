@@ -25,6 +25,10 @@ export class ApiService {
     {headers: this.httpHeaders});
   }
   
+  getCounsellors(): Observable<any> {
+    return this.http.get(this.baseurl + '/counsellors',
+    {headers: this.httpHeaders});
+  }
   
   
 }

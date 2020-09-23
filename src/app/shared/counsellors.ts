@@ -2,7 +2,7 @@ export class Counsellors {
     name: string;
     experience: string;
     occupation : string;
-    ranking : boolean;
+    ranking : string;
     contact : string;
     address : string;
     profilepic: string;
