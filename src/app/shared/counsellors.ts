@@ -1,9 +1,9 @@
 export class Counsellors {
     name: string;
-    experience: string;
+    years_of_exp : string;
     occupation : string;
     ranking : string;
     contact : string;
     address : string;
-    profilepic: string;
+    profile_pic: string;
 }
