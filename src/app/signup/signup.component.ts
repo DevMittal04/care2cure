@@ -23,10 +23,14 @@ export class SignupComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder,private api:ApiService,public dialogRef:MatDialogRef<SignupComponent>) {
-    this.formdata = {fullName:'', email: '' , password: '', confirmpassword: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:[''] };
+    this.formdata = {fullName:'', email: '' , password: '', confirmpassword: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:File };
    }
     
   ngOnInit() { }
+
+  onImageAdded(event){
+      this.formdata.profilepic = event.target.files[0];
+  }
   
   onSubmit = () =>{
 

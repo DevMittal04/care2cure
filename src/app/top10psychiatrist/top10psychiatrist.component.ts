@@ -9,22 +9,13 @@ import { ApiService } from '../api.service';
   providers: [ApiService]
 })
 export class Top10psychiatristComponent implements OnInit {
-  name = ["Sejal","Srishti"];
-  counsellor = [{name:'Sejal Gupta S',
-                  years_of_exp: '3',
-                  occupation : 'Therapist',
-                  ranking : '4',
-                  contact : '9513825047',
-                  address : '8th main 9th cross Malleshwaram',
-                  profile_pic: '../assets/sejal.jpg'
-                }];
 
   list: Counsellors[] = [
     {
       name:'Sejal Gupta S',
       years_of_exp: '3',
       occupation : 'Therapist',
-      ranking : '4',
+      ranking : '1',
       contact : '9513825047',
       address : '8th main 9th cross Malleshwaram',
       profile_pic: '../assets/sejal.jpg'

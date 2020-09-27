@@ -25,7 +25,31 @@
               <span class="card-text">Rank Acquired - {{ i.ranking }}</span><br>
               <span class="card-text">Contact - {{ i.contact }}</span><br>
               <span class="card-text">Address - {{ i.address }}</span><br>
-                <a href="#" class="btn btn-outline-secondary btnn">RATE</a>
+              <div class=star *ngIf="i.ranking=='1'">
+                <mat-icon>star</mat-icon>
+             </div>
+             <div class=star *ngIf="i.ranking=='2'">
+              <mat-icon>star</mat-icon>
+              <mat-icon>star</mat-icon>
+           </div>
+           <div class=star *ngIf="i.ranking=='3'">
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+            <mat-icon>star</mat-icon>
+         </div>
+              <div class=star *ngIf="i.ranking=='4'">
+                 <mat-icon>star</mat-icon>
+                 <mat-icon>star</mat-icon>
+                 <mat-icon>star</mat-icon>
+                 <mat-icon>star</mat-icon>
+              </div>
+              <div class=star *ngIf="i.ranking=='5'">
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+                <mat-icon>star</mat-icon>
+             </div>
             </div>
         </div>
     </div>

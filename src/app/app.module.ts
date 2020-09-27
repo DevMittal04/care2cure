@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
 
+
 import 'hammerjs';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -30,6 +31,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { LiverssComponent } from './liverss/liverss.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
@@ -47,7 +49,8 @@ import { LiverssComponent } from './liverss/liverss.component';
     Top10psychiatristComponent,
     SelfcareComponent,
     StatisticsComponent,
-    LiverssComponent
+    LiverssComponent,
+    AboutusComponent
     
   ],
   imports: [

@@ -1,11 +1,10 @@
 .toolbar{
-    background-color: #006655;
+    position: absolute;
+    background-color:transparent;
     color: #ffffff;
     font-size: xx-large;
     height: 3cm;
     font-family: Helvetica;
-    position:sticky;
-    position: -webkit-sticky; /* For macOS/iOS Safari */
     top: 0; /* Sets the sticky toolbar to be on top */
     z-index: 1000;
 }
@@ -39,7 +38,7 @@
     background-color: #ffffff;
     color:#006655;
     padding:15px;
-    font-size: x-large;
+    font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }

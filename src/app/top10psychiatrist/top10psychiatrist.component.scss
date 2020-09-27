@@ -55,6 +55,8 @@
   transform: rotateY(180deg);
   position: absolute;
   top: 0;
+  padding:20px;
+  font-size: large;
 }
 
 .card-flip:hover .card-front {

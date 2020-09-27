@@ -9,6 +9,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { Top10psychiatristComponent } from './top10psychiatrist/top10psychiatrist.component';
 import { SelfcareComponent } from './selfcare/selfcare.component';
 import { LiverssComponent } from './liverss/liverss.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+
+
 
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
@@ -18,7 +22,9 @@ const routes: Routes = [
   { path: 'profile',component:ProfileComponent},
   { path: 'top10',component:Top10psychiatristComponent},
   { path:'selfcare',component:SelfcareComponent},
-  { path: 'liverss',component:LiverssComponent}
+  { path: 'liverss',component:LiverssComponent},
+  { path: 'statistics',component:StatisticsComponent},
+  { path: 'aboutus',component:AboutusComponent}
 
 ];
 
