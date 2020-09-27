@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
   
   constructor() {
-    this.formdata = {fullName:'', email: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:[''] };
+    this.formdata = {fullName:'', email: '',contact:'',dob:'',occupation:'',address:'',profilepic:[''] };
    }
 
 

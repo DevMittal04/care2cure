@@ -1,4 +1,3 @@
-<router-outlet></router-outlet>
 <mat-toolbar class="dashboardhead">
   <button mat-icon-button class="menubutton" (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
@@ -42,20 +41,18 @@
 
  <div class="carddiv" *ngIf="isprofile">
 <mat-card class="editcard">
-  <mat-grid-list cols="2">
-    <mat-grid-tile>
+
  
   <div class="profile_content_inside">
-    <div class="leftside">
+    <div class="rightside">
       <img src="../assets/adduser.png " class="profile" width="150px" height="150px">
-    </div>
+    </div><br>
     <div class="editbutton">
-      <button mat-raised-button class="edit">EDIT</button>
+      <button mat-raised-button  style="width: 100%;">EDIT</button>
     </div>
   </div>
-</mat-grid-tile>
-<mat-grid-tile>
-  <div class="profile_content_inside" *ngIf="isprofile">
+
+  <div *ngIf="isprofile">
       <mat-form-field class="name" floatLabel="always" color="primary" apperance="standard">
         <mat-label>Name</mat-label>
         <input matInput type="text" [(ngModel)]="formdata.fullName" color="primary" placeholder="Gopal">
@@ -63,7 +60,6 @@
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-      <br>
       <mat-form-field class="email" floatLabel="always" color="primary">
         <mat-label>Email</mat-label>
         <input matInput [(ngModel)]="formdata.email" placeholder="Ex. pat@example.com">
@@ -78,31 +74,26 @@
         <input type="tel" matInput [(ngModel)]="formdata.contact" placeholder="555-555-1234">
         <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
-      <br>
       <mat-form-field class="dob" floatLabel="always">
         <mat-label>Date Of Birth</mat-label>
         <input type="date" matInput [(ngModel)]="formdata.dob" placeholder="21/12/2000">
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
       <br>
-      <mat-form-field class="address" floatLabel="always">
-        <mat-label>Address</mat-label>
-        <textarea matInput [(ngModel)]="formdata.address1" placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
-      </mat-form-field>
-      <br>
-      <mat-form-field class="address" floatLabel="always">
-        <mat-label>Address</mat-label>
-        <textarea matInput [(ngModel)]="formdata.address2" placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
-      </mat-form-field>
-      <br>
       <mat-form-field class="occupation" floatLabel="always">
         <mat-label>Occupation</mat-label>
-        <input matInput [(ngModel)]="occupation.contact" type="text">
+        <input type="text" matInput [(ngModel)]="formdata.occupation">
       </mat-form-field>
-
-    <button mat-raised-button class="save"  (click)="update()">Save</button>
+      <mat-form-field class="address" floatLabel="always">
+        <mat-label>Address</mat-label>
+        <textarea matInput [(ngModel)]="formdata.address" placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+      <br>
+      <div class="save">
+          <button mat-raised-button class="savebutton" (click)="update()">Save</button>
+      </div>
+     
   </div>
-  </mat-grid-tile>
-</mat-grid-list>
+
 </mat-card>
-</div> 
+</div>

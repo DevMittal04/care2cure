@@ -25,6 +25,8 @@ export class HeaderComponent implements OnInit {
   {
     this.showModal = false;
   }
+  
+  
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
         email: ['', [Validators.required, Validators.email]],
@@ -74,16 +76,6 @@ openSignup() {
   dialogConfig.minWidth = '40%';
   dialogConfig.maxHeight = '100%';
   dialogConfig.minHeight = '40%';
-
- 
-  
   this.dialog.open(SignupComponent, dialogConfig);
 }
-
-
- 
-
-
-
-
 }
