@@ -33,6 +33,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { LiverssComponent } from './liverss/liverss.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
+import { StatsService } from './stats.service';
+
 
 
 
@@ -77,7 +79,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     MatMenuModule,
     
   ],
-  providers: [],
+  providers: [StatsService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

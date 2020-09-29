@@ -1,8 +1,12 @@
-<div>
-    <table>
-        <tr class="row">
-            <td style="width: 700px;height:50%;" ><canvas id="lineChart"></canvas></td>
-            <td style="width: 700px;height:50%;"></td>
-        </tr>
-    </table>
+<div *ngIf="chart1" style="height:600px;width:600px;">
+   <canvas id="canvas" >{{ chart1 }}</canvas>
 </div>
+<div *ngIf="chart2" style="height:600px;width:600px;">
+    <canvas id="canvas1" >{{ chart2 }}</canvas>
+ </div>
+ <div *ngIf="chart3" style="height:600px;width:600px;">
+    <canvas id="canvas2" >{{ chart3 }}</canvas>
+ </div>
+ <div *ngIf="chart4" style="height:600px;width:600px;">
+    <canvas id="canvas3" >{{ chart4 }}</canvas>
+ </div>

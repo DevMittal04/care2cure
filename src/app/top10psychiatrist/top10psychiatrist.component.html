@@ -9,12 +9,12 @@
   </div>
 </mat-toolbar>
 
-<body>
+<body class="body">
     
-      <div class="card card-flip cardlay" *ngFor="let i of list">
+      <div class="card card-flip cardlay mat-elevation-z4" *ngFor="let i of list">
         <div class="card-front counsellor">
             <div class="card-body ">
-                <h3 class="card-title">Dr. {{ i.name }}</h3>
+                <h3 class="card-title">{{ i.name }}</h3>
                 <img class="headerimage" src="{{ i.profile_pic }}"  alt="Photo">
                 <p class="card-text">OCCUPATION - {{ i.occupation }}</p>
             </div>
@@ -22,7 +22,6 @@
         <div class="card-back counsellor1">
             <div class="card-body">
               <span class="card-text">Years of Experience - {{ i.years_of_exp }}</span><br>
-              <span class="card-text">Rank Acquired - {{ i.ranking }}</span><br>
               <span class="card-text">Contact - {{ i.contact }}</span><br>
               <span class="card-text">Address - {{ i.address }}</span><br>
               <div class=star *ngIf="i.ranking=='1'">

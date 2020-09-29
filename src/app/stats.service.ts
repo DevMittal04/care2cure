@@ -9,15 +9,17 @@ export class StatsService {
 
   constructor(private http: HttpClient) { }
 
-  private AgeStats = 'http://localhost:8000/agemorbiditychart';
-
-  GetAgeStatistics() {
-    return this.http.get<any>(this.AgeStats).pipe(
-    map( result => {
-      console.log(result);
-      return result;
-    })
-    );
+  AgeMorbidity(){
+    return this.http.get("http://127.0.0.1:8000/agemorbiditychart").pipe(map(result => result));
+  }
+  States(){
+    return this.http.get("http://127.0.0.1:8000/statedisorderchart").pipe(map(result => result));
+  }
+  SuicidalRisk(){
+    return this.http.get("http://127.0.0.1:8000/suicidalriskchart").pipe(map(result => result));
+  }
+  MentalHealth(){
+    return this.http.get("http://127.0.0.1:8000/humanresourceschart").pipe(map(result => result));
   }
 
 }

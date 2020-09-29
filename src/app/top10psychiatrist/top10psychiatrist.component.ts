@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Counsellors } from '../shared/counsellors';
 import { ApiService } from '../api.service';
 
+
 @Component({
   selector: 'app-top10psychiatrist',
   templateUrl: './top10psychiatrist.component.html',
@@ -34,7 +35,6 @@ export class Top10psychiatristComponent implements OnInit {
   onupload = () =>{
     this.api.getCounsellors().subscribe(
       data=>{
-        alert("Hey");
         //this.counsellor['name'].push(data.name);
         this.list = data;
         

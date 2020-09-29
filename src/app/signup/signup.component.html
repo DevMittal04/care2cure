@@ -7,8 +7,8 @@
         <mat-step [stepControl]="firstFormGroup">
           <ng-template matStepLabel>Basic Details</ng-template>
       <div class="mainfirstpart">
-        <input type="file" [(ngModel)]="formdata.profilepic" (change)="onImageAdded($event)" accept="image/*" #file>
-        <button mat-button (click)="file.click()"  class="upload"><img height="150px" width="150px" src="../assets/adduser.png" ></button>
+        <input type="file" [(ngModel)]="formdata.profilepic" (change)="onImageAdded($event)" >
+        <!-- <button mat-button (click)="file.click()"  class="upload"><img height="150px" width="150px" src="../assets/adduser.png" ></button> -->
       </div>
       
         <div class="mainfirstpart">   
