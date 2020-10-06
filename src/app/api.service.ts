@@ -10,6 +10,7 @@ export class ApiService {
 
   baseurl = "http://127.0.0.1:8000";
   httpHeaders = new HttpHeaders({'Content-Type':'application/json'});
+  httpHeaders1 = new HttpHeaders({'Content-Type':'multipart/form-data'});
 
   constructor(private http:HttpClient) { }
 
@@ -20,6 +21,8 @@ export class ApiService {
     {headers: this.httpHeaders});
   }
 
+  
+
   login(form): Observable<any> {
     return this.http.get(this.baseurl + '/login/' + form ,
     {headers: this.httpHeaders});
@@ -28,6 +31,35 @@ export class ApiService {
   getCounsellors(): Observable<any> {
     return this.http.get(this.baseurl + '/counsellors',
     {headers: this.httpHeaders});
+  }
+
+  articleWritten(form): Observable<any> {
+    const body = {title:form.title,desc:form.body,email:form.email};
+    return this.http.post(this.baseurl+'/addarticle', JSON.stringify(body),
+    {headers: this.httpHeaders});
+
+  }
+
+  getArticles():Observable<any>{
+    return this.http.get(this.baseurl+'/articles',
+    {headers: this.httpHeaders});
+  }
+
+
+  userProfile(email):Observable<any>{
+    return this.http.get(this.baseurl+'/user/'+email,
+    {headers: this.httpHeaders});
+  }
+
+  update(form): Observable<any> {
+    const body = {name:form.fullName, email: form.email , contact:form.contact , address:form.address,dob:form.dob, occupation:form.occupation };
+    return this.http.put(this.baseurl + '/update/' + form.email , body,
+    {headers: this.httpHeaders});
+  }
+
+  video():Observable<any>{
+    return this.http.get(this.baseurl+'/emotioncapture',
+    {headers:this.httpHeaders});
   }
   
   

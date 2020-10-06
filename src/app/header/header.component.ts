@@ -4,6 +4,7 @@ import { MatDialog,MatDialogConfig } from '@angular/material';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SignupComponent } from '../signup/signup.component';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ export class HeaderComponent implements OnInit {
   showModal: boolean;
   registerForm: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private el: ElementRef,public dialog:MatDialog,private api:ApiService) { }
+  constructor(private formBuilder: FormBuilder,private el: ElementRef,public dialog:MatDialog,private api:ApiService,private router:Router) { }
   show()
   {
     this.showModal = true;
@@ -43,6 +44,7 @@ onSubmit() {
         data => {
           if(this.registerForm.get('password').value == data.password){
               alert("Login Successful!");
+              this.router.navigate(["/profile"], { "queryParams": data });
           }
           else{
             alert("Login Unsuccessful");

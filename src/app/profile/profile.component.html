@@ -55,14 +55,14 @@
   <div *ngIf="isprofile">
       <mat-form-field class="name" floatLabel="always" color="primary" apperance="standard">
         <mat-label>Name</mat-label>
-        <input matInput type="text" [(ngModel)]="formdata.fullName" color="primary" placeholder="Gopal">
+        <input matInput type="text" [(ngModel)]="initvalues.fullName"  color="primary" placeholder="Gopal">
         <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
       <mat-form-field class="email" floatLabel="always" color="primary">
         <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="formdata.email" placeholder="Ex. pat@example.com">
+        <input matInput [(ngModel)]="initvalues.email" placeholder="Ex. pat@example.com">
         <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
           <mat-icon>close</mat-icon>
         </button>
@@ -71,22 +71,22 @@
       <mat-form-field class="contact" floatLabel="always">
         <mat-label>phone</mat-label>
         <span matPrefix>+91 &nbsp;</span>
-        <input type="tel" matInput [(ngModel)]="formdata.contact" placeholder="555-555-1234">
+        <input type="tel" matInput [(ngModel)]="initvalues.contact" placeholder="555-555-1234">
         <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
       <mat-form-field class="dob" floatLabel="always">
         <mat-label>Date Of Birth</mat-label>
-        <input type="date" matInput [(ngModel)]="formdata.dob" placeholder="21/12/2000">
+        <input type="date" matInput [(ngModel)]="initvalues.dob" value="initvalues.dob" placeholder="21/12/2000">
         <mat-icon matSuffix>close</mat-icon>
       </mat-form-field>
       <br>
       <mat-form-field class="occupation" floatLabel="always">
         <mat-label>Occupation</mat-label>
-        <input type="text" matInput [(ngModel)]="formdata.occupation">
+        <input type="text" matInput [(ngModel)]="initvalues.occupation" value="initvalues.occupation">
       </mat-form-field>
       <mat-form-field class="address" floatLabel="always">
         <mat-label>Address</mat-label>
-        <textarea matInput [(ngModel)]="formdata.address" placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+        <textarea matInput [(ngModel)]="initvalues.address" placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
       </mat-form-field>
       <br>
       <div class="save">

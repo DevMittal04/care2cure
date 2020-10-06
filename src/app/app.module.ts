@@ -12,6 +12,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatIconModule} from '@angular/material/icon';
+import {MatStepperModule} from '@angular/material/stepper';
+
 
 
 import 'hammerjs';
@@ -27,13 +31,12 @@ import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { Top10psychiatristComponent } from './top10psychiatrist/top10psychiatrist.component';
 import { SelfcareComponent } from './selfcare/selfcare.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatStepperModule} from '@angular/material/stepper';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { LiverssComponent } from './liverss/liverss.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
 import { StatsService } from './stats.service';
+import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.component';
 
 
 
@@ -52,7 +55,8 @@ import { StatsService } from './stats.service';
     SelfcareComponent,
     StatisticsComponent,
     LiverssComponent,
-    AboutusComponent
+    AboutusComponent,
+    EmotioncaptureComponent
     
   ],
   imports: [
@@ -77,6 +81,7 @@ import { StatsService } from './stats.service';
     MatMenuModule,
     MatStepperModule,
     MatMenuModule,
+    MatPaginatorModule
     
   ],
   providers: [StatsService],

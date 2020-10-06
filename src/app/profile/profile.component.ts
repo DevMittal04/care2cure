@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { HttpClient, HttpHeaders  } from "@angular/common/http";
+import { Router, ActivatedRoute } from "@angular/router";
+import { ApiService } from '../api.service';
+
+
 @Component({
   selector: 'app-profilr',
   templateUrl: './profile.component.html',
@@ -9,14 +14,16 @@ export class ProfileComponent implements OnInit {
 
 
   formdata;
+  initvalues;
   isprofile: boolean = false;
   isactivities: boolean = true;
   profilehead: boolean = false;
   activitieshead: boolean = true;
-
+  emm;
   
-  constructor() {
-    this.formdata = {fullName:'', email: '',contact:'',dob:'',occupation:'',address:'',profilepic:[''] };
+  constructor(private api:ApiService, private router: Router, private route: ActivatedRoute) {
+    this.initvalues =  {fullName:'', email: '',contact:'',dob:'',occupation:'',address:'',profilepic:[''] };
+    
    }
 
 
@@ -33,10 +40,40 @@ export class ProfileComponent implements OnInit {
     this.activitieshead = true;
   }
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.emm = params["email"];
+      this.api.userProfile(this.emm).subscribe(
+        data => {
+            this.initvalues.fullName = data.name;
+            this.initvalues.email = data.email;
+            this.initvalues.contact = data.contact;
+            this.initvalues.dob = data.dob;
+            this.initvalues.occupation = data.occupation;
+            this.initvalues.address = data.address;
+        },
+        error => {
+          console.log(error);
+        }
+        );
+    });
+
+     
+   
   }
 
   update(){
-
+    this.api.update(this.initvalues).subscribe(
+      data => {
+        alert("Data updated!!")
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
+
+    
+
+ 
 
 }

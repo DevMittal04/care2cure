@@ -11,6 +11,7 @@ import { SelfcareComponent } from './selfcare/selfcare.component';
 import { LiverssComponent } from './liverss/liverss.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.component';
 
 
 
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path:'selfcare',component:SelfcareComponent},
   { path: 'liverss',component:LiverssComponent},
   { path: 'statistics',component:StatisticsComponent},
-  { path: 'aboutus',component:AboutusComponent}
+  { path: 'aboutus',component:AboutusComponent},
+  { path: 'emotioncapture',component:EmotioncaptureComponent}
 
 ];
 

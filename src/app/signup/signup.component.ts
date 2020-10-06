@@ -2,6 +2,8 @@ import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
+import { query } from '@angular/core/src/render3/query';
 
 
 @Component({
@@ -22,21 +24,24 @@ export class SignupComponent implements OnInit {
 
 
 
-  constructor(private formBuilder: FormBuilder,private api:ApiService,public dialogRef:MatDialogRef<SignupComponent>) {
-    this.formdata = {fullName:'', email: '' , password: '', confirmpassword: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:File };
+  constructor(private formBuilder: FormBuilder,private api:ApiService,public dialogRef:MatDialogRef<SignupComponent>,private router:Router) {
+    this.formdata = {fullName:'', email: '' , password: '', confirmpassword: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:['']};
    }
     
   ngOnInit() { }
 
-  onImageAdded(event){
-      this.formdata.profilepic = event.target.files[0];
-  }
+  fileToUpload: File = null;
+
+  handleFileInput(files: FileList) {
+    this.formdata.profilepic = files.item(0);
+    console.log(this.formdata.profilepic.name)
+}
   
   onSubmit = () =>{
 
     this.api.upload(this.formdata).subscribe(
       data => {
-         alert("Sign Up Successful");
+         alert("Sign Up Successful,Login to View Your Profile!!");
       },
       error => {
         alert(this.formdata);

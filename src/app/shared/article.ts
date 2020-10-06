@@ -1,4 +1,5 @@
 export class Articles{
     title:string;
-    description:string;
+    desc:string;
+    email:string;
 }
