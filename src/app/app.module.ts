@@ -15,6 +15,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -37,6 +39,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 
 import { StatsService } from './stats.service';
 import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.component';
+import { MindpalaceComponent } from './mindpalace/mindpalace.component';
 
 
 
@@ -56,7 +59,8 @@ import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.compone
     StatisticsComponent,
     LiverssComponent,
     AboutusComponent,
-    EmotioncaptureComponent
+    EmotioncaptureComponent,
+    MindpalaceComponent
     
   ],
   imports: [
@@ -81,7 +85,9 @@ import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.compone
     MatMenuModule,
     MatStepperModule,
     MatMenuModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatExpansionModule,
+    MatTooltipModule
     
   ],
   providers: [StatsService],

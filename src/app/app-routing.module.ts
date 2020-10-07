@@ -12,6 +12,7 @@ import { LiverssComponent } from './liverss/liverss.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.component';
+import { MindpalaceComponent } from './mindpalace/mindpalace.component';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'liverss',component:LiverssComponent},
   { path: 'statistics',component:StatisticsComponent},
   { path: 'aboutus',component:AboutusComponent},
-  { path: 'emotioncapture',component:EmotioncaptureComponent}
+  { path: 'emotioncapture',component:EmotioncaptureComponent},
+  { path: 'mindpalace',component:MindpalaceComponent}
 
 ];
 
