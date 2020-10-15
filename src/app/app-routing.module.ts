@@ -13,6 +13,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.component';
 import { MindpalaceComponent } from './mindpalace/mindpalace.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'statistics',component:StatisticsComponent},
   { path: 'aboutus',component:AboutusComponent},
   { path: 'emotioncapture',component:EmotioncaptureComponent},
-  { path: 'mindpalace',component:MindpalaceComponent}
+  { path: 'mindpalace',component:MindpalaceComponent},
+  { path: 'chatbot',component:ChatbotComponent}
 
 ];
 

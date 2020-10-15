@@ -40,6 +40,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { StatsService } from './stats.service';
 import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.component';
 import { MindpalaceComponent } from './mindpalace/mindpalace.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 
@@ -60,7 +61,8 @@ import { MindpalaceComponent } from './mindpalace/mindpalace.component';
     LiverssComponent,
     AboutusComponent,
     EmotioncaptureComponent,
-    MindpalaceComponent
+    MindpalaceComponent,
+    ChatbotComponent
     
   ],
   imports: [
