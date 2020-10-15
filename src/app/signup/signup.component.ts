@@ -25,17 +25,12 @@ export class SignupComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder,private api:ApiService,public dialogRef:MatDialogRef<SignupComponent>,private router:Router) {
-    this.formdata = {fullName:'', email: '' , password: '', confirmpassword: '',contact:'',dob:'',occupation:'',address1:'',address2:'',profilepic:['']};
+    this.formdata = {fullName:'', email: '' , password: '', confirmpassword: '',contact:'',dob:'',occupation:'',address1:'',address2:''};
    }
     
   ngOnInit() { }
 
-  fileToUpload: File = null;
 
-  handleFileInput(files: FileList) {
-    this.formdata.profilepic = files.item(0);
-    console.log(this.formdata.profilepic.name)
-}
   
   onSubmit = () =>{
 
