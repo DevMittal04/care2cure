@@ -10,7 +10,7 @@ export class ApiService {
 
   baseurl = "http://127.0.0.1:8000";
   httpHeaders = new HttpHeaders({'Content-Type':'application/json'});
-  httpHeaders1 = new HttpHeaders({'Content-Type':'multipart/form-data'});
+  httpHeaders1 = new HttpHeaders({'Content-Type':'application/html'});
 
   constructor(private http:HttpClient) { }
 
@@ -58,8 +58,8 @@ export class ApiService {
   }
 
   video():Observable<any>{
-    return this.http.get(this.baseurl+'/emotioncapture',
-    {headers:this.httpHeaders});
+    return this.http.get(this.baseurl+'/index',
+    {headers:this.httpHeaders1});
   }
   
   

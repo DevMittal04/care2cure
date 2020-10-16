@@ -9,18 +9,19 @@ import { ApiService } from '../api.service';
 })
 export class EmotioncaptureComponent implements OnInit {
 
+  videoframe;
   constructor(private api:ApiService) { }
 
   ngOnInit() {
-    this.api.video().subscribe(
-      data=>{
-        //this.counsellor['name'].push(data.name);
-        alert("Starting Video");
-        
-      },
-      error=>{
-         alert(error);
-      });
+    // this.api.video().subscribe(
+    //   data=>{
+    //     //this.counsellor['name'].push(data.name);
+    //     this.videoframe=data;
+    
+    //   },
+    //   error=>{
+    //      alert(error);
+    //   });
   }
 
 }

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { element } from '@angular/core/src/render3/instructions';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
+  providers:[ApiService]
   
 })
 export class HomepageComponent implements OnInit {
@@ -12,7 +14,7 @@ export class HomepageComponent implements OnInit {
   iscontactus:boolean=false;
   isaboutus:boolean=false;
 
-  constructor() {
+  constructor(private api:ApiService) {
    }
 
    showcontactus()
@@ -41,7 +43,20 @@ export class HomepageComponent implements OnInit {
     this.isaboutus = false;
   }
 
-  ngOnInit() {
+  videoopen(){
+    this.api.video().subscribe(
+      data=>{
+        //this.counsellor['name'].push(data.name);
+    
+      },
+      error=>{
+         alert(error);
+      });
   }
+  ngOnInit() {
+
+  }
+
+
 
 }
