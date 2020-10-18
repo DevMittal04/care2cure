@@ -40,8 +40,8 @@ export class ProfileComponent implements OnInit {
     this.activitieshead = true;
   }
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      this.emm = params["email"];
+    
+      this.emm = localStorage.getItem("useremail");
       this.api.userProfile(this.emm).subscribe(
         data => {
             this.initvalues.fullName = data.name;
@@ -50,12 +50,14 @@ export class ProfileComponent implements OnInit {
             this.initvalues.dob = data.dob;
             this.initvalues.occupation = data.occupation;
             this.initvalues.address = data.address;
+            localStorage.setItem("name",this.initvalues.fullName);
         },
         error => {
           console.log(error);
         }
         );
-    });
+
+  
 
      
    
