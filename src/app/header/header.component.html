@@ -5,9 +5,9 @@
   <span class = "signup"></span>
  <div class="usercontrol">
   <button *ngIf="profile" mat-button routerLink="/profile"><mat-icon class="prof">account_circle</mat-icon></button>
-
  <button mat-raised-button class="login" (click)="show()"> <mat-icon>accessibility_new</mat-icon>{{ log_detail }}</button>
 </div>
+
   </mat-toolbar>
   <div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -40,6 +40,9 @@
               <button type="button" class="btn btn-primary resetpassword"  (click)="hide()"data-toggle="modal" data-target="#exampleModal">
                 Forgot password ?
               </button>
+              <button mat-raised-button (click)="hide()" type="button" data-toggle="modal" data-target="#exampleModal1">
+                ANONYMOUS USER
+              </button>
             </div>
         </div>
       </div>
@@ -65,6 +68,30 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary getotp">GET OTP</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Anonymous-->
+
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ANONYMOUS USER</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <br>
+        <br>
+        <input type="text" placeholder="Username"[(ngModel)]="username">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="createanonymous()">Save</button>
       </div>
     </div>
   </div>

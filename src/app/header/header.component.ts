@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  providers: [ApiService]
 })
 export class HeaderComponent implements OnInit {
 
@@ -20,7 +21,10 @@ export class HeaderComponent implements OnInit {
   submitted = false;
   profile = false;
   name;
-  constructor(private formBuilder: FormBuilder,private el: ElementRef,public dialog:MatDialog,private api:ApiService,private router:Router) { }
+  username;
+  constructor(private formBuilder: FormBuilder,private el: ElementRef,public dialog:MatDialog,private api:ApiService,private router:Router) {
+     this.username = "";
+   }
 
   show()
   {
@@ -116,5 +120,20 @@ openSignup() {
   dialogConfig.maxHeight = '100%';
   dialogConfig.minHeight = '40%';
   this.dialog.open(SignupComponent, dialogConfig);
+}
+
+createanonymous(){
+
+  this.api.createAnonymous(this.username).subscribe(
+    data => {
+       alert("Session Created!!");
+       localStorage.setItem('anonymousUser',this.username);
+    },
+    error => {
+      alert(this.username);
+      console.log(error);
+    }
+  );
+
 }
 }

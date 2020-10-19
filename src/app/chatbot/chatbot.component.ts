@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 declare global {
   interface Window {
       kommunicate:any;
+      Kommunicate:any;
   }
 }
 
@@ -22,10 +23,18 @@ export class ChatbotComponent implements OnInit {
   
 
   ngOnInit() {
+    this.email = localStorage.getItem('useremail');
     (function(d, m){
     
       var kommunicateSettings = 
-          {"appId":"74d6f87685f0e90c644c28b15f45553f","popupWidget":true,"automaticChatOpenOnNavigation":true};
+          {"appId":"74d6f87685f0e90c644c28b15f45553f","popupWidget":true,"automaticChatOpenOnNavigation":true,
+          "onInit": function () {
+            var chatContext = {
+
+                email: this.email
+            };
+            window.Kommunicate.updateChatContext(chatContext);
+        }};
 
       var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
       s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
@@ -35,7 +44,6 @@ export class ChatbotComponent implements OnInit {
        m._globals = kommunicateSettings;
   })(document, window.kommunicate || {});
    
-  this.email = localStorage.getItem('useremail');
 
   }
 

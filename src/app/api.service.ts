@@ -61,6 +61,13 @@ export class ApiService {
     return this.http.get(this.baseurl+'/index',
     {headers:this.httpHeaders1});
   }
+
+  createAnonymous(username):Observable<any>{
+    const body = {username : username};
+    return this.http.post(this.baseurl + '/createanyuser', JSON.stringify(body),
+    {headers: this.httpHeaders});
+   
+  }
   
   
 }
