@@ -98,7 +98,7 @@ export class LiverssComponent implements OnInit{
          alert("Article saved");
       },
       error => {
-        alert(this.write);
+        alert("Cannot save article! Please use a valid email!!");
         console.log(error);
       }
     );

@@ -39,7 +39,7 @@ export class SignupComponent implements OnInit {
          alert("Sign Up Successful,Login to View Your Profile!!");
       },
       error => {
-        alert(this.formdata);
+        alert("User Already Exists!");
         console.log(error);
       }
     );

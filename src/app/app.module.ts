@@ -38,6 +38,7 @@ import { LiverssComponent } from './liverss/liverss.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
 import { StatsService } from './stats.service';
+import { ReportService } from './report.service';
 import { EmotioncaptureComponent } from './emotioncapture/emotioncapture.component';
 import { MindpalaceComponent } from './mindpalace/mindpalace.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
@@ -92,7 +93,7 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     MatTooltipModule
     
   ],
-  providers: [StatsService],
+  providers: [StatsService,ReportService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
